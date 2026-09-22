@@ -2,18 +2,21 @@
     box-sizing: border-box;
 }
 
-
 body {
     margin: 0;
     padding: 40px 20px;
 
     font-family: Arial, Helvetica, sans-serif;
 
-    background-color: #f4f7fb;
+    background: #f7f3fc;
 
-    color: #222;
+    color: #332d3d;
 }
 
+
+/* =========================
+   MAIN CONTAINER
+========================= */
 
 .container {
     width: 100%;
@@ -23,48 +26,51 @@ body {
 }
 
 
-/* Header */
+/* =========================
+   HEADER
+========================= */
 
 .header {
     text-align: center;
 
-    margin-bottom: 25px;
+    margin-bottom: 28px;
 }
-
 
 .header h1 {
     margin: 0 0 8px;
 
     font-size: 36px;
 
-    color: #1f2937;
+    color: #493d5f;
 }
-
 
 .header p {
     margin: 0;
 
-    color: #6b7280;
+    color: #81758f;
 
     font-size: 16px;
 }
 
 
-/* Cards */
+/* =========================
+   CARDS
+========================= */
 
 .calculator-card,
 .info-card {
-    background: white;
+    background: #ffffff;
 
     padding: 30px;
 
     margin-bottom: 20px;
 
-    border-radius: 12px;
+    border-radius: 16px;
 
-    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e8def2;
+
+    box-shadow: 0 5px 20px rgba(91, 70, 120, 0.08);
 }
-
 
 .calculator-card h2,
 .info-card h2 {
@@ -72,18 +78,19 @@ body {
 
     margin-bottom: 25px;
 
-    color: #1f2937;
+    color: #493d5f;
 
     font-size: 22px;
 }
 
 
-/* Inputs */
+/* =========================
+   INPUTS
+========================= */
 
 .input-group {
     margin-bottom: 20px;
 }
-
 
 .input-group label {
     display: block;
@@ -92,31 +99,30 @@ body {
 
     font-weight: bold;
 
-    color: #374151;
+    color: #574b66;
 }
-
 
 .input-with-unit {
     display: flex;
 
     align-items: center;
 
-    border: 1px solid #d1d5db;
+    background: #fcfaff;
 
-    border-radius: 7px;
+    border: 1px solid #dcd0e8;
 
-    background: white;
+    border-radius: 9px;
 
     overflow: hidden;
-}
 
+    transition: 0.2s;
+}
 
 .input-with-unit:focus-within {
-    border-color: #2563eb;
+    border-color: #a98bc4;
 
-    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.12);
+    box-shadow: 0 0 0 3px rgba(169, 139, 196, 0.15);
 }
-
 
 .input-with-unit input {
     flex: 1;
@@ -129,14 +135,21 @@ body {
 
     outline: none;
 
+    background: transparent;
+
+    color: #332d3d;
+
     font-size: 16px;
 }
 
+.input-with-unit input::placeholder {
+    color: #b1a7ba;
+}
 
 .input-with-unit span {
     padding: 0 15px;
 
-    color: #6b7280;
+    color: #897b98;
 
     font-size: 14px;
 
@@ -144,7 +157,9 @@ body {
 }
 
 
-/* Button */
+/* =========================
+   BUTTON
+========================= */
 
 button {
     width: 100%;
@@ -155,9 +170,9 @@ button {
 
     border: none;
 
-    border-radius: 7px;
+    border-radius: 9px;
 
-    background-color: #2563eb;
+    background: #9b7bb5;
 
     color: white;
 
@@ -166,32 +181,39 @@ button {
     font-weight: bold;
 
     cursor: pointer;
-}
 
+    transition: background 0.2s, transform 0.2s;
+}
 
 button:hover {
-    background-color: #1d4ed8;
+    background: #8968a5;
+
+    transform: translateY(-1px);
 }
 
 
-/* Error */
+/* =========================
+   ERROR
+========================= */
 
 .error {
     margin-bottom: 15px;
 
     padding: 12px;
 
-    border-radius: 6px;
+    border-radius: 8px;
 
-    background-color: #fee2e2;
+    background: #fcecef;
 
-    color: #b91c1c;
+    color: #a34d62;
 
     font-size: 14px;
 }
 
 
-/* Result */
+/* =========================
+   RESULT
+========================= */
 
 .result {
     margin-top: 25px;
@@ -200,29 +222,31 @@ button:hover {
 
     text-align: center;
 
-    background-color: #f0f7ff;
+    background: #f5effa;
 
-    border-radius: 8px;
+    border-radius: 12px;
 
-    border: 1px solid #dbeafe;
+    border: 1px solid #e4d7ef;
 }
-
 
 .result h2 {
     margin-bottom: 10px;
 }
-
 
 .bmi-value {
     font-size: 48px;
 
     font-weight: bold;
 
-    color: #2563eb;
+    color: #765493;
 
     margin: 5px 0 12px;
 }
 
+
+/* =========================
+   CATEGORY BADGES
+========================= */
 
 .category {
     display: inline-block;
@@ -236,39 +260,37 @@ button:hover {
     font-size: 14px;
 }
 
-
 .category.normal {
-    background-color: #dcfce7;
+    background: #e4f4e9;
 
-    color: #166534;
+    color: #477456;
 }
-
 
 .category.underweight {
-    background-color: #dbeafe;
+    background: #e9e5f8;
 
-    color: #1e40af;
+    color: #63548c;
 }
-
 
 .category.overweight {
-    background-color: #fef3c7;
+    background: #fff2d9;
 
-    color: #92400e;
+    color: #98723c;
 }
-
 
 .category.obesity {
-    background-color: #fee2e2;
+    background: #f9e3e8;
 
-    color: #991b1b;
+    color: #a15a6b;
 }
 
 
-/* Information */
+/* =========================
+   BMI INFORMATION
+========================= */
 
 .description {
-    color: #6b7280;
+    color: #81758f;
 
     margin-top: -15px;
 
@@ -277,13 +299,11 @@ button:hover {
     font-size: 14px;
 }
 
-
 table {
     width: 100%;
 
     border-collapse: collapse;
 }
-
 
 th,
 td {
@@ -291,35 +311,36 @@ td {
 
     text-align: left;
 
-    border-bottom: 1px solid #e5e7eb;
+    border-bottom: 1px solid #eee7f3;
 }
 
-
 th {
-    background-color: #f3f4f6;
+    background: #f5effa;
 
-    color: #374151;
+    color: #574b66;
 
     font-size: 14px;
 }
-
 
 td {
     font-size: 14px;
-}
 
+    color: #665c70;
+}
 
 tr:last-child td {
     border-bottom: none;
 }
 
 
-/* Footer */
+/* =========================
+   FOOTER
+========================= */
 
 footer {
     text-align: center;
 
-    color: #9ca3af;
+    color: #a69baa;
 
     font-size: 12px;
 
@@ -327,7 +348,9 @@ footer {
 }
 
 
-/* Mobile */
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 600px) {
 
@@ -335,15 +358,12 @@ footer {
         padding: 25px 15px;
     }
 
-
     .header h1 {
         font-size: 30px;
     }
-
 
     .calculator-card,
     .info-card {
         padding: 22px;
     }
-
 }
